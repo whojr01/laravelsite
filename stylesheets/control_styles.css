@@ -163,7 +163,7 @@
     box-sizing: content-box;
     background-color: rgba(0, 0, 0, 0.3);
     background-size: cover;
-    background-image: url(../images/bill_adventure_image_map_320x180_vertical.jpg);
+    background-image: url(https://whojr01.github.io/images/bill_adventure_image_map_320x180_vertical.jpg);
     background-position: center;
     background-repeat: no-repeat;
     font-size: 0;
@@ -360,7 +360,7 @@
     right: 0;
     width: 45px;
     height: 45px;
-    background: rgba(0, 0, 0, 0.1) url(../images/fullscreen.png) no-repeat 0 0;
+    background: rgba(0, 0, 0, 0.1) url(https://whojr01.github.io/images/fullscreen.png) no-repeat 0 0;
     z-index: 2;
     opacity: 0;
     -webkit-transition: opacity 0.8s;
@@ -450,7 +450,7 @@
     padding-top: 56.25%;
     /* 16:9 aspect ratio */
     background-color: rgba(0, 0, 0, 0.3);
-    background-image: url(../images/bill_adventure_image_map_320x180_vertical.jpg);
+    background-image: url(https://whojr01.github.io/images/bill_adventure_image_map_320x180_vertical.jpg);
     /* background-position: center; */
     background-repeat: no-repeat;
     background-size: cover;
@@ -614,7 +614,7 @@
 /* And if you have added the HTML: <div class="video-playbutton-layer"></div> */
 
 #ninja3 .video-playbutton-layer {
-    background: transparent url(../images/video-btn.png) no-repeat center center;
+    background: transparent url(https://whojr01.github.io/images/video-btn.png) no-repeat center center;
     cursor: pointer;
 }
 
