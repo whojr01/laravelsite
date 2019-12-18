@@ -1,0 +1,698 @@
+/*
+  * This file contains all the controls for the controls.
+  * Ninja-slider
+  * Includes:
+  * ninja-slider.css styles.
+  * ninja2.css styles.
+  * ninja3.css styles.
+  * thumbnail-slider.css styles.
+  * thumb2.css styles
+*/
+
+
+/* http://www.menucool.com */
+
+.container-slider {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    vertical-align: center;
+    margin: 50px auto 0;
+    padding: 0;
+    max-width: 960px;
+}
+
+.container-row {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    border: 1px solid chartreuse;
+}
+
+.container-viewer-left {
+    position: relative;
+    display: block;
+    float: left;
+    width: 320px;
+    max-width: 320px;
+}
+
+.container-viewer-middle {
+    position: relative;
+    display: block;
+    width: 320px;
+    max-width: 320px;
+    width: 100%;
+    float: left;
+    margin-top: 60px;
+}
+
+.container-viewer-right {
+    position: relative;
+    display: block;
+    float: right;
+    width: 320px;
+    max-width: 320px;
+}
+
+
+/* Thumbnail styles */
+
+#thumbnail-slider {
+    width: 19%;
+    max-width: 100%;
+    display: block;
+    background-color: rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 1px 11px rgba(0, 0, 0, 0.2);
+    position: relative;
+    -webkit-user-select: none;
+    user-select: none;
+    float: left;
+}
+
+#thumb2 {
+    width: 19%;
+    max-width: 100%;
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 1px 11px rgba(0, 0, 0, 0.2);
+    margin-left: 3px;
+    position: relative;
+    -webkit-user-select: none;
+    user-select: none;
+    float: right;
+}
+
+#thumb2:hover,
+#thumbnail-slider:hover {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+}
+
+#ninja2.fullscreen #thumb2,
+#ninja-slider.fullscreen #thumbnail-slider {
+    max-width: 960px;
+    width: 100%;
+}
+
+#ninja3.fullscreen .ninja3-inner,
+#ninja2.fullscreen .ninja2-inner,
+#ninja-slider.fullscreen .slider-inner {
+    max-width: 960px;
+    width: 100%;
+}
+
+#thumb2 div.thumb2-inner,
+#thumbnail-slider div.thumb-inner {
+    width: 100%;
+    height: 300px;
+    /* margin-top: 3px; */
+    box-sizing: border-box;
+    overflow: hidden;
+    display: inline-block;
+}
+
+#thumb2 div.thumb2-inner #thumb2-ul,
+#thumbnail-slider div.thumb-inner #thumb-ul {
+    white-space: nowrap;
+    position: relative;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    vertical-align: middle;
+    box-sizing: border-box;
+    display: block;
+    width: auto !important;
+    height: auto !important;
+}
+
+#thumb2 ol li,
+#thumbnail-slider ol li {
+    border: 2px solid transparent;
+    outline: 1px solid transparent;
+    margin: 0;
+    /* margin-bottom: 2px; */
+    box-sizing: content-box;
+    padding: 0;
+    position: relative;
+    display: block;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+#thumb2 ol li.active,
+#thumbnail-slider ol li.active {
+    border-color: chartreuse;
+    -webkit-filter: initial;
+    filter: initial;
+}
+
+#thumb2 li:hover,
+#thumbnail-slider li:hover {
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+#thumb2 div.thumb2-inner .thumb2-thumb,
+#thumbnail-slider div.thumb-inner .thumbnail-thumb {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding-top: 56.25%;
+    box-sizing: content-box;
+    background-color: rgba(0, 0, 0, 0.3);
+    background-size: cover;
+    background-image: url(../images/bill_adventure_image_map_320x180_vertical.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    font-size: 0;
+}
+
+#thumb2-pause-play,
+#thumbnail-slider-pause-play {
+    display: none;
+}
+
+#thumbnail-slider-prev,
+#thumbnail-slider-next {
+    position: absolute;
+    width: 100%;
+    height: 57px;
+    line-height: 30px;
+    text-align: center;
+    margin: 0;
+    z-index: 10;
+    cursor: pointer;
+    transition: opacity 0.6s;
+    *background-color: #ccc;
+    /*IE7 hack*/
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+#thumb2-prev,
+#thumb2-next {
+    position: absolute;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    margin: 0;
+    z-index: 10;
+    cursor: pointer;
+    transition: opacity 0.6s;
+    *background-color: #ccc;
+    /*IE7 hack*/
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+#thumb2-prev,
+#thumbnail-slider-prev {
+    top: 5px;
+}
+
+#thumb2-next,
+#thumbnail-slider-next {
+    bottom: 1px;
+}
+
+#thumb2-next.disabled,
+#thumb2-prev.disabled,
+#thumbnail-slider-next.disabled,
+#thumbnail-slider-prev.disabled {
+    opacity: 0.1;
+    cursor: default;
+}
+
+#thumb2 ol li.sl-sl,
+#thumbnail-slider ol li.sl-sl {
+    animation: sl-sl 300ms ease both;
+    animation-name: sl-sl;
+    animation-duration: 300ms;
+    animation-timing-function: ease;
+    animation-delay: initial;
+    animation-iteration-count: initial;
+    animation-direction: initial;
+    animation-fill-mode: both;
+    animation-play-state: initial;
+}
+
+#thumb2 ol li[class*="sl-"],
+#thumbnail-slider ol li[class*="sl-"] {
+    opacity: 1;
+    transition: opacity 0ms;
+    transition-property: opacity;
+    transition-duration: 0ms;
+    transition-timing-function: initial;
+    transition-delay: initial;
+}
+
+
+/* arrows */
+
+#thumb2-prev::before,
+#thumb2-next::before,
+#thumbnail-slider-prev::before,
+#thumbnail-slider-next::before {
+    position: relative;
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-left: 4px solid white;
+    border-top: 4px solid white;
+}
+
+#thumb2-prev::before,
+#thumbnail-slider-prev::before {
+    top: 12px;
+    -ms-transform: rotate(-45deg);
+    /*IE9*/
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+#thumbnail-slider-next::before {
+    bottom: -12px;
+    -ms-transform: rotate(135deg);
+    /*IE9*/
+    -webkit-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+}
+
+#thumb2-next::before {
+    bottom: 12px;
+    -ms-transform: rotate(135deg);
+    /*IE9*/
+    -webkit-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+}
+
+
+/* Ninja styles */
+
+#ninja-slider {
+    width: 79%;
+    max-width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: inline-block;
+    margin-right: 3px;
+    float: right;
+}
+
+#ninja2 {
+    width: 79%;
+    max-width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: inline-block;
+    margin-left: 3px;
+    margin-top: 165px;
+    float: left;
+    position: absolute;
+    bottom: 0;
+}
+
+#ninja3 {
+    width: 100%;
+    max-width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: inline-block;
+    margin-left: 3px;
+    float: right;
+    vertical-align: bottom;
+}
+
+#ninja-slider.fullscreen,
+#ninja3.fullscreen,
+#ninja2.fullscreen {
+    background: green;
+    margin-top: 0;
+    margin-left: 0;
+}
+
+#ninja3.fullscreen #ninja3-prev,
+#ninja2.fullscreen #ninja2-prev,
+#ninja-slider.fullscreen #ninja-slider-prev {
+    left: 50px;
+}
+
+#ninja3.fullscreen #ninja3-next,
+#ninja2.fullscreen #ninja2-next,
+#ninja-slider.fullscreen #ninja-slider-next {
+    right: 50px;
+}
+
+#ninja3 .fs-icon,
+#ninja2 .fs-icon,
+#ninja-slider .fs-icon {
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background: rgba(0, 0, 0, 0.1) url(../images/fullscreen.png) no-repeat 0 0;
+    z-index: 2;
+    opacity: 0;
+    -webkit-transition: opacity 0.8s;
+    transition: opacity 0.8s;
+}
+
+#ninja3:hover .fs-icon,
+#ninja2:hover .fs-icon,
+#ninja-slider:hover .fs-icon {
+    opacity: 1 !important;
+}
+
+#ninja3.fullscreen .fs-icon,
+#ninja2.fullscreen .fs-icon,
+#ninja-slider.fullscreen .fs-icon {
+    background-position: center -45px;
+    opacity: 1 !important;
+}
+
+#ninja3 .ninja3-inner,
+#ninja2 .ninja2-inner,
+#ninja-slider .slider-inner {
+    margin: 0 auto;
+    position: relative;
+    box-sizing: border-box;
+    font-size: 0;
+    width: 100%;
+}
+
+#ninja3 .ninja3-inner ul,
+#ninja2 .ninja2-inner #ninja2-ul,
+#ninja-slider .slider-inner #ninja-ul {
+    position: relative;
+    list-style: none;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    width: 100%;
+}
+
+#ninja2 .ninja2-inner li,
+#ninja-slider .slider-inner li {
+    background-color: #111;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    font-size: 12px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+#ninja3 .ninja3-inner li {
+    background-color: #111;
+    width: 100%;
+    height: 100%;
+    padding-top: 56.25%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    font-size: 12px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+#ninja3 .ninja3-inner .ns-show,
+#ninja2 .ninja2-inner .ns-show,
+#ninja-slider .slider-inner .ns-show {
+    opacity: 1 !important;
+}
+
+#ninja3 .ninja3-inner .ninja3-thumb,
+#ninja2 .ninja2-inner .ninja2-thumb,
+#ninja-slider .slider-inner .ninja-thumb {
+    display: block;
+    border-radius: 3px;
+    width: 100%;
+    height: 0;
+    padding-top: 56.25%;
+    /* 16:9 aspect ratio */
+    background-color: rgba(0, 0, 0, 0.3);
+    background-image: url(../images/bill_adventure_image_map_320x180_vertical.jpg);
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    font-size: 0;
+}
+
+#ninja3 .ninja3-inner li.sl-sl,
+#ninja2 .ninja2-inner li.sl-sl,
+#ninja-slider .slider-inner li.sl-sl {
+    animation: sl-sl 300ms ease both;
+    animation-name: sl-sl;
+    animation-duration: 300ms;
+    animation-timing-function: ease;
+    animation-delay: initial;
+    animation-iteration-count: initial;
+    animation-direction: initial;
+    animation-fill-mode: both;
+    animation-play-state: initial;
+}
+
+#ninja3 .ninja3-inner li[class*="sl-"],
+#ninja2 .ninja2-inner li[class*="sl-"],
+#ninja-slider .slider-inner li[class*="sl-"] {
+    opacity: 1;
+    transition: opacity 0ms;
+    transition-property: opacity;
+    transition-duration: 0ms;
+    transition-timing-function: initial;
+    transition-delay: initial;
+}
+
+
+/* ---------Arrow buttons ------- */
+
+
+/* The arrow button id should be: slider id + ("-prev", "-next", and "-pause-play") */
+
+#ninja3-pause-play,
+#ninja2-pause-play,
+#ninja-slider-pause-play {
+    display: none;
+}
+
+#ninja3-prev,
+#ninja3-next,
+#ninja2-prev,
+#ninja2-next,
+#ninja-slider-prev,
+#ninja-slider-next {
+    position: absolute;
+    display: inline-block;
+    width: 42px;
+    height: 56px;
+    line-height: 56px;
+    top: 50%;
+    margin-top: -28px;
+    background-color: rgba(0, 0, 0, 0.4);
+    background-color: #ccc\9;
+    /*IE8 hack*/
+    backface-visibility: hidden;
+    color: white;
+    overflow: hidden;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    user-select: none;
+    border-radius: 2px;
+    z-index: 10;
+    opacity: 0.3;
+    font-family: sans-serif;
+    font-size: 13px;
+    cursor: pointer;
+    -webkit-transition: all 0.7s;
+    transition: all 0.7s;
+}
+
+.ninja3-inner:hover #ninja3-prev,
+.ninja3-inner:hover #ninja3-next,
+.ninja2-inner:hover #ninja2-prev,
+.ninja2-inner:hover #ninja2-next,
+.slider-inner:hover #ninja-slider-prev,
+.slider-inner:hover #ninja-slider-next {
+    opacity: 1 !important;
+}
+
+#ninja3-prev,
+#ninja2-prev,
+#ninja-slider-prev {
+    left: 0;
+}
+
+#ninja3-next,
+#ninja2-next,
+#ninja-slider-next {
+    right: 0;
+}
+
+
+/* arrows */
+
+#ninja3-prev::before,
+#ninja3-next::before,
+#ninja2-prev::before,
+#ninja2-next::before,
+#ninja-slider-prev::before,
+#ninja-slider-next::before {
+    position: absolute;
+    top: 17px;
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-left: 2px solid white;
+    border-top: 2px solid white;
+}
+
+#ninja3-prev::before,
+#ninja2-prev::before,
+#ninja-slider-prev::before {
+    -ms-transform: rotate(-45deg);
+    /*IE 9*/
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    backface-visibility: hidden;
+    right: 4px;
+}
+
+#ninja3-next::before,
+#ninja2-next::before,
+#ninja-slider-next::before {
+    -ms-transform: rotate(135deg);
+    /*IE 9*/
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+    backface-visibility: hidden;
+    left: 4px;
+}
+
+
+/* Video controls */
+
+
+/* --------- slider image ------- */
+
+
+/* ---------If there are videos ------- */
+
+#ninja3 .video,
+#ninja3 .video-playbutton-layer {
+    top: 0;
+    left: 0;
+    border: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: black;
+    position: absolute;
+}
+
+
+/* And if you have added the HTML: <div class="video-playbutton-layer"></div> */
+
+#ninja3 .video-playbutton-layer {
+    background: transparent url(../images/video-btn.png) no-repeat center center;
+    cursor: pointer;
+}
+
+
+/* And if you have YouTube or Vimeo */
+
+#ninja3 div.stopVideoIcon {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 0;
+    right: 0px;
+    margin: 0 0 6px 6px;
+    background: rgba(0, 0, 0, 0.7);
+    border-bottom-left-radius: 4px;
+    cursor: pointer;
+}
+
+#ninja3 div.stopVideoIcon::before {
+    content: "+";
+    color: white;
+    font: bold 30px/30px arial;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    display: block;
+}
+
+
+/*pagination num within the arrow buttons*/
+
+#ninja3-prev div,
+#ninja3-next div,
+#ninja2-prev div,
+#ninja2-next div,
+#ninja-slider-prev div,
+#ninja-slider-next div {
+    display: none;
+}
+
+
+/*------ pager(nav bullets) ------*/
+
+
+/* The pager id should be: slider id + "-pager" */
+
+#ninja3-pager,
+#ninja2-pager,
+#ninja-slider-pager {
+    display: none;
+}
+
+#ninja3-pager,
+#ninja3-prev,
+#ninja3-next,
+#ninja3-pause-play,
+#ninja2-pager,
+#ninja2-prev,
+#ninja2-next,
+#ninja2-pause-play,
+#ninja-slider-pager,
+#ninja-slider-prev,
+#ninja-slider-next,
+#ninja-slider-pause-play {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+
+/*Responsive settings
+
+@media only screen and (max-width:800px) {
+    #ninja-slider-prev,
+    #ninja-slider-next,
+    #ninja-slider-pager {
+        display: none;
+    }
+    #ninja-slider .fs-icon {
+        display: none;
+    }
+} */

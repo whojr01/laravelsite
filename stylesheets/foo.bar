@@ -1,0 +1,153 @@
+.container-slider
+.container-row
+.container-viewer-left
+.container-viewer-middle
+.container-viewer-right
+#thumbnail-slider
+#thumb2
+#thumb2:hover
+#thumbnail-slider:hover
+#ninja2.fullscreen #thumb2
+#ninja-slider.fullscreen #thumbnail-slider
+#ninja3.fullscreen .ninja3-inner
+#ninja2.fullscreen .ninja2-inner
+#ninja-slider.fullscreen .slider-inner
+#thumb2 div.thumb2-inner
+#thumbnail-slider div.thumb-inner
+#thumb2 div.thumb2-inner #thumb2-ul
+#thumbnail-slider div.thumb-inner #thumb-ul
+#thumb2 ol li
+#thumbnail-slider ol li
+#thumb2 ol li.active
+#thumbnail-slider ol li.active
+#thumb2 li:hover
+#thumbnail-slider li:hover
+#thumb2 div.thumb2-inner .thumb2-thumb
+#thumbnail-slider div.thumb-inner .thumbnail-thumb
+#thumb2-pause-play
+#thumbnail-slider-pause-play
+#thumbnail-slider-prev
+#thumbnail-slider-next
+#thumb2-prev
+#thumb2-next
+#thumb2-prev
+#thumbnail-slider-prev
+#thumb2-next
+#thumbnail-slider-next
+#thumb2-next.disabled
+#thumb2-prev.disabled
+#thumbnail-slider-next.disabled
+#thumbnail-slider-prev.disabled
+#thumb2 ol li.sl-sl
+#thumbnail-slider ol li.sl-sl
+#thumb2 ol li[class*="sl-"]
+#thumbnail-slider ol li[class*="sl-"]
+#thumb2-prev::before
+#thumb2-next::before
+#thumbnail-slider-prev::before
+#thumbnail-slider-next::before
+#thumb2-prev::before
+#thumbnail-slider-prev::before
+#thumbnail-slider-next::before
+#thumb2-next::before
+#ninja-slider
+#ninja2
+#ninja3
+#ninja-slider.fullscreen
+#ninja3.fullscreen
+#ninja2.fullscreen
+#ninja3.fullscreen #ninja3-prev
+#ninja2.fullscreen #ninja2-prev
+#ninja-slider.fullscreen #ninja-slider-prev
+#ninja3.fullscreen #ninja3-next
+#ninja2.fullscreen #ninja2-next
+#ninja-slider.fullscreen #ninja-slider-next
+#ninja3 .fs-icon
+#ninja2 .fs-icon
+#ninja-slider .fs-icon
+#ninja3:hover .fs-icon
+#ninja2:hover .fs-icon
+#ninja-slider:hover .fs-icon
+#ninja3.fullscreen .fs-icon
+#ninja2.fullscreen .fs-icon
+#ninja-slider.fullscreen .fs-icon
+#ninja3 .ninja3-inner
+#ninja2 .ninja2-inner
+#ninja-slider .slider-inner
+#ninja3 .ninja3-inner ul
+#ninja2 .ninja2-inner #ninja2-ul
+#ninja-slider .slider-inner #ninja-ul
+#ninja2 .ninja2-inner li
+#ninja-slider .slider-inner li
+#ninja3 .ninja3-inner li
+#ninja3 .ninja3-inner .ns-show
+#ninja2 .ninja2-inner .ns-show
+#ninja-slider .slider-inner .ns-show
+#ninja3 .ninja3-inner .ninja3-thumb
+#ninja2 .ninja2-inner .ninja2-thumb
+#ninja-slider .slider-inner .ninja-thumb
+#ninja3 .ninja3-inner li.sl-sl
+#ninja2 .ninja2-inner li.sl-sl
+#ninja-slider .slider-inner li.sl-sl
+#ninja3 .ninja3-inner li[class*="sl-"]
+#ninja2 .ninja2-inner li[class*="sl-"]
+#ninja-slider .slider-inner li[class*="sl-"]
+#ninja3-pause-play
+#ninja2-pause-play
+#ninja-slider-pause-play
+#ninja3-prev
+#ninja3-next
+#ninja2-prev
+#ninja2-next
+#ninja-slider-prev
+#ninja-slider-next
+.ninja3-inner:hover #ninja3-prev
+.ninja3-inner:hover #ninja3-next
+.ninja2-inner:hover #ninja2-prev
+.ninja2-inner:hover #ninja2-next
+.slider-inner:hover #ninja-slider-prev
+.slider-inner:hover #ninja-slider-next
+#ninja3-prev
+#ninja2-prev
+#ninja-slider-prev
+#ninja3-next
+#ninja2-next
+#ninja-slider-next
+#ninja3-prev::before
+#ninja3-next::before
+#ninja2-prev::before
+#ninja2-next::before
+#ninja-slider-prev::before
+#ninja-slider-next::before
+#ninja3-prev::before
+#ninja2-prev::before
+#ninja-slider-prev::before
+#ninja3-next::before
+#ninja2-next::before
+#ninja-slider-next::before
+#ninja3 .video
+#ninja3 .video-playbutton-layer
+#ninja3 .video-playbutton-layer
+#ninja3 div.stopVideoIcon
+#ninja3 div.stopVideoIcon::before
+#ninja3-prev div
+#ninja3-next div
+#ninja2-prev div
+#ninja2-next div
+#ninja-slider-prev div
+#ninja-slider-next div
+#ninja3-pager
+#ninja2-pager
+#ninja-slider-pager
+#ninja3-pager
+#ninja3-prev
+#ninja3-next
+#ninja3-pause-play
+#ninja2-pager
+#ninja2-prev
+#ninja2-next
+#ninja2-pause-play
+#ninja-slider-pager
+#ninja-slider-prev
+#ninja-slider-next
+#ninja-slider-pause-play
